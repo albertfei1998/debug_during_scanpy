@@ -1,0 +1,12 @@
+# 通过 conda 安装 igraph
+conda activate pyplot
+conda install -c conda-forge python-igraph
+# 在 jupyter lab 中加载
+import igraph
+# 反复报错，回报如下
+ImportError: dlopen(/Users/albertfei/anaconda3/envs/pyplot/lib/python3.8/site-packages/igraph/_igraph.cpython-38-darwin.so, 0x0002): Library not loaded: @rpath/libblas.3.dylib
+  Referenced from: <80D6A426-1924-3651-9695-F481B0A515A5> /Users/albertfei/anaconda3/envs/pyplot/lib/python3.8/site-packages/igraph/_igraph.cpython-38-darwin.so
+  Reason: tried: '/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/python3.8/site-packages/igraph/../../../libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/python3.8/site-packages/igraph/../../../libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/bin/../lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/albertfei/anaconda3/envs/pyplot/lib/libblas.3.dylib' (no such file), '/Users/albertfei/anaconda3/envs/pyplot/bin/../lib/libblas.3.dylib' (no such file), '/usr/local/lib/libblas.3.dylib' (no such file), '/usr/lib/libblas.3.dylib' (no such file, not in dyld cache)
+# 解决方法
+# conda 安装版本过于老旧，用pip安装最新版本
+ pip install igraph
